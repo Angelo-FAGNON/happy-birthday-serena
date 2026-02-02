@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Serena 🎉</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="terminal-loader">
+            <div class="terminal-line">> Initializing birthday celebration...</div>
+            <div class="terminal-line">> Loading Serena.exe...</div>
+            <div class="terminal-line">> Compiling  years of awesomeness...</div>
+            <div class="terminal-line">> Importing memories from Serena...</div>
+            <div class="terminal-line">> Ready to celebrate! <span class="cursor"></span></div>
+        </div>
+    </div>
+
+    <!-- Countdown -->
+    <div class="countdown-container" id="countdownContainer">
+        <div class="countdown-number" id="countdownNumber">0</div>
+    </div>
+
+
+    <!-- Matrix Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero " id="heroSection">
+            <div class="glitch-wrapper">
+                <h1 class="hero-title">🎂Happy Birthday🎁</h1>
+            </div>
+            <h2  class="hero-subtitle">Miss Séréna</h2>
+            <div class="hero-message">
+                <p>Une Reine est née ce jour </p>
+                <p>Développeuse talentueuse, codeuse passionnée, et personne exceptionnelle</p>
+                <span class="hero-name">SERENA SINZOGAN</span>
+                <p style="margin-top: 1rem; font-size: 1.1rem;">
+                    De <span class="code-snippet">print("Hello World")</span> à
+                    <span class="code-snippet">build(context)</span>,
+                    tu continues d'écrire l'histoire d'une carrière extraordinaire !
+                </p>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>↓</span>
+            </div>
+        </section>
+
+        
+<!-- ===== MESSAGE GÉNÉRAL DIGIWEB ===== -->
+<section class="section-light message-general">
+    <div class="message-general-container">
+        <!-- <h2 class="section-title"><span class="section-title-text"> DigiWeb SARL</span></h2> -->
+        <div class="message-card zoom-in">
+            <!-- Logo -->
+            <img src="img/logo.png" alt="DigiWeb Logo" class="message-logo">
+
+            <!-- Icone -->
+            <!-- <div class="message-icon">💻</div> -->
+
+            <!-- Message -->
+            <p class="message-text">
+                Chère Serena,<br><br>
+                Toute l'équipe de <strong>DigiWeb SARL</strong> te souhaite un très joyeux anniversaire ! 🎉<br>
+                Ton talent, ta créativité et ton dévouement sont une source d'inspiration pour nous tous. 
+                Que cette nouvelle année t'apporte succès, épanouissement et de nombreuses lignes de code sans bugs !<br><br>
+            </p>
+
+            <!-- Auteur -->
+            <p class="message-author">— L'équipe DigiWeb SARL 💙</p>
+        </div>
+    </div>
+</section>
+
+
+       
+
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section-light">
+            <h2 class="section-title animate-on-scroll"><span class="section-title-text">Galerie Memories</span></h2>
+            <div class="gallery-grid">
+                <div class="gallery-item zoom-in">
+                    <img src="./img/M1.jpeg"
+                        alt="Photo 1">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Moment précieux 1</p>
+                    </div>
+                </div>
+                <div class="gallery-item zoom-in" style="transition-delay: 0.1s;">
+                    <img src="./img/M2.jpeg"
+                        alt="Photo 2">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Codage intense 2</p>
+                    </div>
+                </div>
+                <div class="gallery-item zoom-in" style="transition-delay: 0.2s;">
+                    <img src="./img/M3.jpeg"
+                        alt="Photo 3">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Succès célébré 3</p>
+                    </div>
+                </div>
+                <div class="gallery-item zoom-in" style="transition-delay: 0.3s;">
+                    <img src="./img/M4.jpeg"
+                        alt="Photo 4">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Inspiration quotidienne 4</p>
+                    </div>
+                </div>
+                <div class="gallery-item zoom-in" style="transition-delay: 0.4s;">
+                    <img src="./img/M5.jpeg"
+                        alt="Photo 5">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Aventure continue 5</p>
+                    </div>
+                </div>
+                <div class="gallery-item zoom-in" style="transition-delay: 0.5s;">
+                    <img src="./img/M6.jpeg"
+                        alt="Photo 6">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Avenir brillant 6</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <h2 class="section-title animate-on-scroll"><span style="color: #ffffff;" class="section-title-text">Quiz: Connais-tu Serena?</span>
+            </h2>
+            <div class="quiz-container fade-in-left">
+                <div class="quiz-question active" data-question="1">
+                    <p class="question-text">1- Quel est le langage de programmation préféré de Serena?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-answer="correct">React</div>
+                        <div class="quiz-option" data-answer="wrong">Flutter</div>
+                        <div class="quiz-option" data-answer="wrong">JAVA</div>
+                        <div class="quiz-option" data-answer="wrong">PHP</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question" data-question="2">
+                    <p class="question-text">2- Quel était son premier projet de développement?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-answer="wrong">Application e-commerce</div>
+                        <div class="quiz-option" data-answer="correct">RDV en ligne</div>
+                        <div class="quiz-option" data-answer="wrong">Réseau social</div>
+                        <div class="quiz-option" data-answer="wrong">Jeu mobile</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question" data-question="3">
+                    <p class="question-text">3- Quelle est sa boisson préférée?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-answer="wrong">L'eau minérale</div>
+                        <div class="quiz-option" data-answer="wrong">Thé</div>
+                        <div class="quiz-option" data-answer="correct">Chill</div>
+                        <div class="quiz-option" data-answer="wrong">Jus de fruits</div>
+                    </div>
+                </div>
+
+                <div class="quiz-question" data-question="4">
+                    <p class="question-text">4- Quel est son IDE favori?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-answer="wrong">IntelliJ IDEA</div>
+                        <div class="quiz-option" data-answer="correct">VS Code</div>
+                        <div class="quiz-option" data-answer="wrong">Android Studio</div>
+                        <div class="quiz-option" data-answer="wrong">Sublime Text</div>
+                    </div>
+                </div>
+
+                <div class="quiz-result">
+                    <h3>Résultat final</h3>
+                    <div class="quiz-score">
+                        <span id="finalScore">0</span>/4
+                    </div>
+                    <p id="quizMessage"></p>
+                    <button class="quiz-restart" onclick="restartQuiz()">Recommencer</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Messages Section -->
+       <section id="messages" class="section-light">
+    <h2 class="section-title animate-on-scroll">
+        <span class="section-title-text">Messages des Collègues</span>
+    </h2>
+
+    <div class="messages-grid">
+
+        <div class="message-card fade-in-left">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Madame Roukayath</h3>
+            <p class="message-text">
+                Joyeux anniversaire 🎂 madame Serena. Je vous souhaite une longue vie, santé de fer, prospérité et que Dieu vous comble de sa grâce. Soyez heureuse
+            </p>
+        </div>
+
+        <div class="message-card fade-in-right">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Madame Laëla</h3>
+            <p class="message-text">
+                Reçois mes meilleurs vœux pour cette nouvelle étape.
+                Que chaque jour t’apporte équilibre, constance et de belles réussites personnelles et professionnelles.
+            </p>
+        </div>
+
+        <div class="message-card fade-in-right">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Madame Paloma</h3>
+            <p class="message-text">
+                Je vous souhaite succès, stabilité et progression continue.
+                Que tous vos efforts soient récompensés à la hauteur de votre investissement.
+            </p>
+        </div>
+
+        <div class="message-card fade-in-left">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Monsieur Anthony</h3>
+            <p class="message-text">
+                HBD à toi Miss Serena. Santés Succes Réussite grâce Divine
+            </p>
+        </div>
+
+        <div class="message-card fade-in-right">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Madame Omolara </h3>
+            <p class="message-text">
+                En ce jour où tu souffle une bougie de plus que le Seigneur t’accorde la grâce de marcher dans cette nouvelle saison de ta vie avec grâce et intégrité devant sa face, qu’il t’amène plus à le connaître et à le désirer davantage.HBD miss Serena.
+            </p>
+        </div>
+
+        <div class="message-card fade-in-left">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Monsieur Bill</h3>
+            <p class="message-text">
+                Ton professionnalisme et ton sens du détail sont impressionnants.
+                Je te souhaite une année productive et pleine de réussites concrètes.
+            </p>
+        </div>
+
+        <div class="message-card fade-in-right">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Monsieur Renaud</h3>
+            <p class="message-text">
+                Joyeux anniversaire 🎊🎂🎉 chère Séréna, bien de choses à toi et beaucoup de réussites dans tes projets personnels ainsi que professionnels. Continue d’apporter ta précieuse contribution et ton sens esthétique, qui subliment avec autant d’élégance les sites et applications que ta propre beauté.
+            </p>
+        </div>
+
+        <div class="message-card fade-in-right">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Monsieur Andy</h3>
+            <p class="message-text">
+                Que cette année t’apporte progression, sérénité et réussite dans tous tes engagements.
+                Mes meilleurs vœux pour la suite.
+            </p>
+        </div>
+        <div class="message-card fade-in-right">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author">Monsieur Magloire</h3>
+            <p class="message-text">
+                Joyeux et Fabuleux Anniversaire à toi Séré Go go.. Beaucoup de 02/02 dans ta vie. Que Dieu te donne tout ce que ton cœur désire. Amen 🙏
+            </p>
+        </div>
+
+        <div class="message-card fade-in-left">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author"> Angelo Pascal FAGNON</h3>
+            <p class="message-text">
+                Je te souhaite une année alignée avec tes ambitions les plus importantes.
+                Que tes décisions soient justes, tes projets solides et tes résultats à la hauteur de ta vision.
+            </p>
+        </div>
+        <div class="message-card fade-in-left">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author"> Madame TOSSAVI</h3>
+            <p class="message-text">
+               En ce jour particulier, je te souhaite une année de santé, de réussite et de belles réalisations. Merci pour ton implication et ton sérieux au sein de l'équipe.  HBD TO YOU SERENA 🎉🎂🎁
+
+            </p>
+        </div>
+
+        <div class="message-card fade-in-left">
+            <div class="message-icon">❤️</div>
+            <h3 class="message-author"> Monsieur TOSSAVI</h3>
+            <p class="message-text">
+                Je te souhaite une année alignée avec tes ambitions les plus importantes.
+                Que tes décisions soient justes, tes projets solides et tes résultats à la hauteur de ta vision.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== SECTION FINALE CÉLÉBRATION ===== -->
+<section class="final-celebration-section">
+    <h1 class="final-title">BONNE FÊTE !</h1>
+    <div class="final-emoji">🎂🎉🎊</div>
+    <h2 class="final-subtitle">À l'année prochaine !</h2>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer  class="footer ">
+    <div class="footer-content">
+        <div class="footer-divider"></div>
+        <p class="footer-creator">
+            Créé par Angelo Pascal FAGNON
+        </p>
+        <div class="footer-divider"></div>
+        <p class="footer-text" style="font-size: 0.85rem; margin-top: 1rem;">
+            © 2026 - Tous droits réservés
+        </p>
+    </div>
+</footer>
+
+</div>
+
+
+    <!-- Music Player -->
+    <div class="music-player">
+        <button class="music-toggle" id="musicToggle">▶</button>
+        <div class="music-info">
+            <div style="font-family: 'Orbitron', sans-serif; color: var(--accent-gold);">Birthday Vibes</div>
+            <div style="font-size: 0.8rem; opacity: 0.7;">Cliquez pour jouer</div>
+        </div>
+        <audio id="backgroundMusic" loop>
+            <source src="./img/Happy Birthday Séréna 3.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    
+        <!-- Canvas Feux d'artifice -->
+    <!-- <canvas id="fireworks"></canvas> -->
+
+
+    <script src="assets/scripts.js"></script>
+</body>
+
+</html>
